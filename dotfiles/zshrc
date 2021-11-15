@@ -1,0 +1,81 @@
+# --------------------------------------------
+# Aliases: General
+
+alias ll='ls -al'
+alias re='source ~/.zshrc'
+
+# --------------------------------------------
+# Aliases: Navigation
+
+development_path='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Development'
+
+alias ds="cd $development_path/@jrh-works/system"
+alias dv="cd $development_path"
+
+# --------------------------------------------
+# Aliases: Git
+
+# Use `g` as a shortcut for `git`.
+# With no arguments, do `git status`.
+function g {
+  if [[ $# > 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
+}
+
+# Check out a branch if there is one,
+# otherwise check out files.
+gc(){
+  if [[ $# == 0 ]]; then
+    local branch=$(select-git-branch)
+    if [[ -n "$branch" ]]; then
+      git checkout "$branch"
+    fi
+    true
+  else
+    git checkout "$@"
+  fi
+}
+
+# Check out a Git branch.
+function gb(){
+  if [[ -z "$1" ]]; then
+    echo "No branch name :(" >&2
+    return 1
+  fi
+  local branch="$1"
+  local base=$2
+  if [[ -n "$base" ]]; then
+    git checkout -b "$branch" "$base"
+  else
+    git checkout -b "$branch"
+  fi
+}
+
+# Amend with the previous commit message.
+alias gam='g commit --amend -Chead'
+
+# Simple aliases.
+alias ga='g add'
+alias gcm='g commit -m '
+alias gd='g diff'
+alias gdc='g diff --cached'
+alias gl="g log --pretty='%C(magenta)%h%C(cyan)%d %C(white)%s'"
+alias gp="g push"
+
+# --------------------------------------------
+# Utilities
+
+# Use vim.
+export EDITOR='vim'
+
+# Use ripgrep for searching.
+export FZF_DEFAULT_COMMAND='rg --hidden --files'
+
+# Use node@16.
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+
+# Use starship.
+eval "$(starship init zsh)"

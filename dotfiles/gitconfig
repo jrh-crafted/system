@@ -1,0 +1,13 @@
+[core]
+  excludesfile = ~/.gitignore
+
+[init]
+  defaultBranch = master
+
+[push]
+  # Push current branch even if you've never pushed it before.
+  default = current
+
+[user]
+  name = Joshua Reade Harris
+  email = web@jrh.place

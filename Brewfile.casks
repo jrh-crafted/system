@@ -1,0 +1,6 @@
+tap 'moritzsternemann/apple-fonts'
+
+cask 'alacritty'
+cask 'alfred'
+cask 'font-sf-mono'
+cask 'rectangle'

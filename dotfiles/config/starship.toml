@@ -1,0 +1,17 @@
+# --------------------------------------------
+# Prompt
+
+add_newline = false
+format = "$directory$git_branch"
+
+# --------------------------------------------
+# Modules
+
+[directory]
+style = '#81A1C1'
+truncate_to_repo = false  # Don't count git branch as a parent directory.
+truncation_length = 2     # Show 1 parent directory.
+
+[git_branch]
+format = "[$branch]($style) "
+style = '#8FBCBB'

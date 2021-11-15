@@ -1,0 +1,7 @@
+# --------------------------------------------
+# Tell search tools what to ignore.
+
+.git/
+autoload/
+node_modules/
+package-lock.json

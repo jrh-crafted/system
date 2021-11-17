@@ -1,0 +1,41 @@
+name: sky
+root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@praising-earth/sky
+
+windows:
+  - tests:
+      layout: 01ef,144x45,0,0{90x45,0,0,0,53x45,91,0[53x33,91,0,2,53x11,91,34,3]}
+      root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@praising-earth/sky/tests
+
+      panes:
+        - vim
+        - npm run develop
+        - 
+
+  - tests:servers:
+      layout: even-horizontal
+
+      panes:
+        - cd api; npm run develop:testing
+        - cd ui; npm run develop:testing
+
+  - ui:
+      layout: 01ef,144x45,0,0{90x45,0,0,0,53x45,91,0[53x33,91,0,2,53x11,91,34,3]}
+      root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@praising-earth/sky/ui
+
+      panes:
+        - vim
+        - npm run develop
+        - 
+
+  - api:
+      layout: 01ef,144x45,0,0{90x45,0,0,0,53x45,91,0[53x33,91,0,2,53x11,91,34,3]}
+      root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@praising-earth/sky/api
+
+      panes:
+        - vim
+        - npm run develop
+        - 
+
+  - root:
+      panes:
+        - 

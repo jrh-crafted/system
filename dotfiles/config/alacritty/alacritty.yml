@@ -21,11 +21,6 @@ font:
     style: Light Italic
 
 # --------------------------------------------
-
-key_bindings:
-  - { key: Return, mods: Command, action: ToggleFullscreen }
-
-# --------------------------------------------
 # Use Nord theme.
 # https://github.com/arcticicestudio/nord-alacritty
 

@@ -40,10 +40,15 @@ Plug 'preservim/nerdtree'
 call plug#end() 
 
 " --------------------------------------------
-" Directory Navigation
+" File Browser
 
+" Hide files and directories.
+let NERDTreeIgnore = [ '^node_modules$', '^package-lock.json$' ]
+
+" Close when a file is opened.
 let NERDTreeQuitOnOpen=1
 
+" Open the file browser.
 nnoremap <leader>t :NERDTreeToggle<cr>
 
 " --------------------------------------------

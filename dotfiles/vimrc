@@ -49,6 +49,9 @@ let NERDTreeIgnore = [ '^node_modules$', '^package-lock.json$' ]
 " Close when a file is opened.
 let NERDTreeQuitOnOpen=1
 
+" Show hidden files.
+let NERDTreeShowHidden=1
+
 " Open the file browser.
 nnoremap <leader>t :NERDTreeToggle<cr>
 

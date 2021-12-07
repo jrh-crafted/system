@@ -2,12 +2,6 @@ name: threads
 root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@jrh-works/threads
 
 windows:
-  - root:
-      layout: 6a8b,192x54,0,0{134x54,0,0,4,57x54,135,0,8}
-
-      panes:
-        - vim README.md
-        - 
   - ui:
       layout: 85a9,192x54,0,0{134x54,0,0,0,57x54,135,0[57x40,135,0,1,57x13,135,41,10]}
       root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@jrh-works/threads/ui
@@ -24,4 +18,8 @@ windows:
       panes:
         - vim
         - npm run develop
+        - 
+
+  - root:
+      panes:
         - 

@@ -11,6 +11,7 @@ development_path='~/Library/Mobile\ Documents/com\~apple\~CloudDocs/Development'
 
 alias ds="cd $development_path/@jrh-works/system"
 alias dv="cd $development_path"
+alias p="tmuxinator"
 
 # --------------------------------------------
 # Aliases: Git

@@ -1,10 +1,10 @@
 name: threads
-root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@jrh-works/threads
+root: ~/Development/@jrh-works/threads
 
 windows:
   - ui:
       layout: 85a9,192x54,0,0{134x54,0,0,0,57x54,135,0[57x40,135,0,1,57x13,135,41,10]}
-      root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@jrh-works/threads/ui
+      root: ~/Development/@jrh-works/threads/ui
 
       panes:
         - vim
@@ -13,7 +13,7 @@ windows:
 
   - api:
       layout: 85a9,192x54,0,0{134x54,0,0,0,57x54,135,0[57x40,135,0,1,57x13,135,41,10]}
-      root: /Users/jrh/Library/Mobile Documents/com~apple~CloudDocs/Development/@jrh-works/threads/api
+      root: ~/Development/@jrh-works/threads/api
 
       panes:
         - vim

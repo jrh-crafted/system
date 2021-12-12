@@ -37,6 +37,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'evanleck/vim-svelte'
 Plug 'preservim/nerdtree'
+Plug 'tomtom/tcomment_vim'
 Plug 'wavded/vim-stylus'
 
 call plug#end() 

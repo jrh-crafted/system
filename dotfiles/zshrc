@@ -61,8 +61,8 @@ alias gam='g commit --amend -Chead'
 # Simple aliases.
 alias ga='g add'
 alias gcm='g commit -m '
-alias gd='g diff'
-alias gdc='g diff --cached'
+alias gd="g diff -- . ':(exclude)package-lock.json'"
+alias gdc="g diff --cached -- . ':(exclude)package-lock.json'"
 alias gl="g log --pretty='%C(magenta)%h%C(cyan)%d %C(white)%s'"
 alias gp="g push"
 

@@ -1,0 +1,25 @@
+name: prototype
+root: <%= Dir.pwd %>
+
+windows:
+  - ui:
+      layout: 85a9,192x54,0,0{134x54,0,0,0,57x54,135,0[57x40,135,0,1,57x13,135,41,10]}
+      root: <%= Dir.pwd %>/ui
+
+      panes:
+        - vim
+        - npm run develop
+        - 
+
+  - api:
+      layout: 85a9,192x54,0,0{134x54,0,0,0,57x54,135,0[57x40,135,0,1,57x13,135,41,10]}
+      root: <%= Dir.pwd %>/api
+
+      panes:
+        - vim
+        - npm run develop
+        - 
+
+  - root:
+      panes:
+        - 

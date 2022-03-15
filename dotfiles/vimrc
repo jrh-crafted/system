@@ -92,6 +92,14 @@ nnoremap <leader>va :VtrAttachToPane<cr>
 nnoremap <leader>rr :VtrSendCommandToRunner !-1<cr>
 
 " --------------------------------------------
+" Indentation
+
+" Disable automatic indentation in `vim-svelte`. It
+" it seems to add extra indents.
+let g:svelte_indent_script = 0
+let g:svelte_indent_style = 0
+
+" --------------------------------------------
 " Colors
 
 " Highlight the current line in the focused file.
@@ -100,6 +108,9 @@ augroup CursorLine
   autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
 augroup END
+
+" Enable syntax highlighting for preproceers using `vim-svelte`.
+let g:svelte_preprocessors = [ 'stylus' ]
 
 " The colors, Duke! The colors!
 colorscheme nord

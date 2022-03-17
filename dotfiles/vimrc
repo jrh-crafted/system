@@ -38,6 +38,7 @@ Plug 'christoomey/vim-tmux-runner'
 Plug 'ervandew/supertab'
 Plug 'evanleck/vim-svelte'
 Plug 'preservim/nerdtree'
+Plug 'svermeulen/vim-subversive'
 Plug 'tomtom/tcomment_vim'
 Plug 'wavded/vim-stylus'
 
@@ -98,6 +99,12 @@ nnoremap <leader>rr :VtrSendCommandToRunner !-1<cr>
 " it seems to add extra indents.
 let g:svelte_indent_script = 0
 let g:svelte_indent_style = 0
+
+" --------------------------------------------
+" Editing
+
+" Substitute a range of text using the clipboard.
+nmap s <plug>(SubversiveSubstitute)
 
 " --------------------------------------------
 " Colors

@@ -1,4 +1,4 @@
-# @jrh-works/system
+# @jrh/system
 
 JRH's system configuration (OS X, M1).
 

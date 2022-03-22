@@ -15,6 +15,6 @@ $ ./install
 1. Set up Alfred.
 2. Set up Rectangle.
 
-## Attribution
+## Gratitude
 
 Special thanks to [Gabe Berke-Williams](https://github.com/gabebw/dotfiles) and the team at [thoughtbot](https://thoughtbot.com).

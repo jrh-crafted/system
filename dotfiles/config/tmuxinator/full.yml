@@ -3,23 +3,18 @@ root: <%= Dir.pwd %>
 
 windows:
   - tests:
-      layout: 01ef,144x45,0,0{90x45,0,0,0,53x45,91,0[53x33,91,0,2,53x11,91,34,3]}
+      layout: 8739,192x54,0,0{122x54,0,0,0,69x54,123,0[69x16,123,0,5,69x16,123,17,13,69x16,123,34,14,69x3,123,51,6]}
       root: <%= Dir.pwd %>/tests
 
       panes:
         - vim
         - npm run develop
+        - cd ../api; npm run develop:testing
+        - cd ../ui; npm run develop:testing
         - 
 
-  - tests:servers:
-      layout: even-horizontal
-
-      panes:
-        - cd api; npm run develop:testing
-        - cd ui; npm run develop:testing
-
   - ui:
-      layout: 01ef,144x45,0,0{90x45,0,0,0,53x45,91,0[53x33,91,0,2,53x11,91,34,3]}
+      layout: b8c5,192x54,0,0{122x54,0,0,2,69x54,123,0[69x50,123,0,8,69x3,123,51,9]}
       root: <%= Dir.pwd %>/ui
 
       panes:
@@ -28,12 +23,13 @@ windows:
         - 
 
   - api:
-      layout: 01ef,144x45,0,0{90x45,0,0,0,53x45,91,0[53x33,91,0,2,53x11,91,34,3]}
+      layout: fefc,192x54,0,0{122x54,0,0,3,69x54,123,0[69x12,123,0,10,69x37,123,13,12,69x3,123,51,11]}
       root: <%= Dir.pwd %>/api
 
       panes:
         - vim
         - npm run develop
+        - npm run tests:watch
         - 
 
   - root:

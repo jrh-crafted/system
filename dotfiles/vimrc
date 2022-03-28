@@ -37,6 +37,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'ervandew/supertab'
 Plug 'evanleck/vim-svelte'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'preservim/nerdtree'
 Plug 'svermeulen/vim-subversive'
 Plug 'tomtom/tcomment_vim'
@@ -118,6 +119,12 @@ augroup END
 
 " Enable syntax highlighting for preproceers using `vim-svelte`.
 let g:svelte_preprocessors = [ 'stylus' ]
+
+" Enable indentation guides.
+let g:indent_guides_enable_on_vim_startup = 1
+
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=none
 
 " The colors, Duke! The colors!
 colorscheme nord

@@ -75,8 +75,8 @@ export EDITOR='vim'
 # Use ripgrep for searching.
 export FZF_DEFAULT_COMMAND='rg --hidden --files'
 
-# Use node@14.
-export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
+# Use node@16.
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # Use starship.
 eval "$(starship init zsh)"

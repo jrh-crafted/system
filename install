@@ -30,6 +30,10 @@ log "Checking for Homebrew."
 if command_does_not_exist brew; then
   log "Installing Homebrew."
   stay_awake_while /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+  log "Adding Homebrew to shell."
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # --------------------------------------------

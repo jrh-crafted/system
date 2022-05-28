@@ -69,14 +69,15 @@ alias gp="g push"
 # --------------------------------------------
 # Utilities
 
+# Use nvm.
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+
 # Use vim.
 export EDITOR='vim'
 
 # Use ripgrep for searching.
 export FZF_DEFAULT_COMMAND='rg --hidden --files'
-
-# Use node@16.
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # Use starship.
 eval "$(starship init zsh)"

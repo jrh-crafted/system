@@ -1,6 +1,6 @@
 brew 'fzf'
 brew 'git'
-brew 'node@16'
+brew 'nvm'
 brew 'rcm'
 brew 'ripgrep'
 brew 'starship'

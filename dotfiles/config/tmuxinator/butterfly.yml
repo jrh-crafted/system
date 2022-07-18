@@ -2,42 +2,51 @@ name: butterfly
 root: ~/Development/@gen/butterfly
 
 windows:
-  - tests:
-      layout: 2118,144x45,0,0{90x45,0,0,0,53x45,91,0[53x13,91,0,5,53x13,91,14,12,53x10,91,28,11,53x6,91,39,7]}
-      root: ~/Development/@gen/butterfly/tests
+  - features:
+      layout: 1935,129x39,0,0{82x39,0,0,1,46x39,83,0[46x33,83,0,8,46x5,83,34,9]}
+      root: ~/Development/@gen/butterfly/features
 
       panes:
         - vim
-        - npm start
-        - cd ../api; npm run develop:testing
-        - cd ../website; npm run develop:testing
+        - sleep 3; npm t
         - 
 
   - ui:
-      layout: 1935,129x39,0,0{82x39,0,0,1,46x39,83,0[46x33,83,0,8,46x5,83,34,9]}
-      root: ~/Development/@gen/butterfly/website
+      layout: 2c76,129x39,0,0{82x39,0,0,2,46x39,83,0[46x30,83,0,10,46x4,83,31,19,46x3,83,36,11]}
+      root: ~/Development/@gen/butterfly/ui
 
       panes:
         - vim
-        - npm run develop
-        - 
+        - npm run tests:watch
+        - npm run dev
+        -
 
   - api:
-      layout: 01ea,129x39,0,0{82x39,0,0,2,46x39,83,0[46x25,83,0,3,46x7,83,26,13,46x5,83,34,10]}
+      layout: 2c76,129x39,0,0{82x39,0,0,2,46x39,83,0[46x30,83,0,10,46x4,83,31,19,46x3,83,36,11]}
       root: ~/Development/@gen/butterfly/api
 
       panes:
         - vim
         - npm run tests:watch
-        - npm run develop
-        - 
+        - npm run dev
+        -
 
-  - database:
-      layout: 1409,129x39,0,0{82x39,0,0,3,46x39,83,0,14}
-      root: ~/Development/@gen/butterfly/database
+  - domain:
+      layout: 1935,129x39,0,0{82x39,0,0,1,46x39,83,0[46x33,83,0,8,46x5,83,34,9]}
+      root: ~/Development/@gen/butterfly/packages/core/domain
 
       panes:
         - vim
+        - npm run tests:watch
+        - 
+
+  - database:
+      layout: 1935,129x39,0,0{82x39,0,0,1,46x39,83,0[46x33,83,0,8,46x5,83,34,9]}
+      root: ~/Development/@gen/butterfly/packages/core/database
+
+      panes:
+        - vim
+        - npm run tests:watch
         - 
 
   - root:

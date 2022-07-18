@@ -73,6 +73,9 @@ alias gp="g push"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
+# Use rbenv.
+eval "$(rbenv init - zsh)"
+
 # Use vim.
 export EDITOR='vim'
 

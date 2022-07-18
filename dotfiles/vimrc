@@ -107,6 +107,9 @@ let g:svelte_indent_style = 0
 " Substitute a range of text using the clipboard.
 nmap s <plug>(SubversiveSubstitute)
 
+" Insert a divider.
+nnoremap <leader>- i--------------------------------------------<esc>:TComment<cr>ko<esc>jjO<esc>
+
 " --------------------------------------------
 " Colors
 

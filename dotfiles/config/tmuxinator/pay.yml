@@ -1,0 +1,26 @@
+name: @cg/pay
+root: ~/Development/@cg/pay
+
+windows:
+  - features:
+      layout: 1935,129x39,0,0{82x39,0,0,1,46x39,83,0[46x33,83,0,8,46x5,83,34,9]}
+      root: ~/Development/@cg/pay/features
+
+      panes:
+        - vim
+        - sleep 3; npm t
+        - 
+
+  - ui:
+      layout: 2c76,129x39,0,0{82x39,0,0,2,46x39,83,0[46x30,83,0,10,46x4,83,31,19,46x3,83,36,11]}
+      root: ~/Development/@cg/pay/ui
+
+      panes:
+        - vim
+        - npm run tests:watch
+        - npm run dev
+        -
+
+  - root:
+      panes:
+        - 

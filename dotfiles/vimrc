@@ -123,7 +123,7 @@ augroup CursorLine
   autocmd WinLeave * setlocal nocursorline
 augroup END
 
-" Enable syntax highlighting for preproceers using `vim-svelte`.
+" Enable syntax highlighting for preprocessors using `vim-svelte`.
 let g:svelte_preprocessors = [ 'stylus' ]
 
 " Enable indentation guides.

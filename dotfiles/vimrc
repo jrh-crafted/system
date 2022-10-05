@@ -96,6 +96,12 @@ nnoremap <leader>va :VtrAttachToPane<cr>
 " Re-run last command in attached pane.
 nnoremap <leader>rr :VtrSendCommandToRunner !-1<cr>
 
+" Run current test suite in attached pane.
+nnoremap <leader>s :VtrSendCommandToRunner npm t<cr>
+
+" Debug current test suite in attached pane.
+nnoremap <leader>d :VtrSendCommandToRunner npm run test:debug<cr>
+
 " --------------------------------------------
 " Indentation
 

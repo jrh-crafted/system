@@ -35,13 +35,13 @@ call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-sort-motion'
-Plug 'christoomey/vim-tmux-runner'
 Plug 'ervandew/supertab'
 Plug 'evanleck/vim-svelte'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-user'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'preservim/nerdtree'
+Plug 'preservim/vimux'
 Plug 'svermeulen/vim-subversive'
 Plug 'tomtom/tcomment_vim'
 Plug 'wavded/vim-stylus'
@@ -89,18 +89,25 @@ nnoremap fd :tabprevious<cr>
 nnoremap fg :tabnext<cr>
 
 " --------------------------------------------
-" Panes
+" Runner Pane
 
-nnoremap <leader>va :VtrAttachToPane<cr>
+let g:VimuxHeight = "40"
+let g:VimuxOrientation = "h"
 
-" Re-run last command in attached pane.
-nnoremap <leader>rr :VtrSendCommandToRunner !-1<cr>
+" Watch current test file in the runner.
+nnoremap <leader>rw :call VimuxRunCommand("npm run tests:watch " . expand('%'))<cr>
 
-" Run current test suite in attached pane.
-nnoremap <leader>s :VtrSendCommandToRunner npm t<cr>
+" Run current test file in the runner.
+nnoremap <leader>rr :call VimuxRunCommand("npm t " . expand('%'))<cr>
 
-" Debug current test suite in attached pane.
-nnoremap <leader>d :VtrSendCommandToRunner npm run test:debug<cr>
+" Run full test suite in the runner.
+nnoremap <leader>rt :call VimuxRunCommand("npm t")<cr>
+
+" Cancel the command in the runner.
+nnoremap <leader>x :VimuxInterruptRunner<cr>
+
+" Close the runner pane.
+nnoremap <leader>c :VimuxCloseRunner<cr>
 
 " --------------------------------------------
 " Indentation

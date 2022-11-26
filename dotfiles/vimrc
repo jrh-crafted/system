@@ -95,13 +95,16 @@ let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
 
 " Watch current test file in the runner.
-nnoremap <leader>rw :call VimuxRunCommand("npm run tests:watch " . expand('%'))<cr>
+nnoremap <leader>rw :call VimuxRunCommand("clear; npm run tests:watch " . expand('%'))<cr>
 
 " Run current test file in the runner.
-nnoremap <leader>rr :call VimuxRunCommand("npm t " . expand('%'))<cr>
+nnoremap <leader>rr :call VimuxRunCommand("clear; npm t " . expand('%'))<cr>
 
 " Run full test suite in the runner.
-nnoremap <leader>rt :call VimuxRunCommand("npm t")<cr>
+nnoremap <leader>rt :call VimuxRunCommand("clear; npm t")<cr>
+
+" Prompt for a command in the runner.
+nnoremap <leader>rp :VimuxPromptCommand<cr>
 
 " Cancel the command in the runner.
 nnoremap <leader>x :VimuxInterruptRunner<cr>

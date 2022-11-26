@@ -1,38 +1,36 @@
 name: tc
-root: ~/Development/@4site/tidycontact-email
+root: ~/Development/@4site/tidycontact
 
 windows:
   - e2e:
-      layout: dc74,144x45,0,0{90x45,0,0,0,53x45,91,0,1}
-      root: ~/Development/@4site/tidycontact-email/e2e
+      root: ~/Development/@4site/tidycontact/e2e
 
       panes:
         - vim
-        - npm t
 
-  - api:
-      layout: dc74,144x45,0,0{90x45,0,0,0,53x45,91,0,1}
-      root: ~/Development/@4site/tidycontact-email/api
+  - email.api:
+      root: ~/Development/@4site/tidycontact/apps/email/api
 
       panes:
         - vim
-        - npm run tests:watch
 
-  - demo:
-      layout: dc74,144x45,0,0{90x45,0,0,0,53x45,91,0,1}
-      root: ~/Development/@4site/tidycontact-email/demo
+  - email.batch.ui:
+      root: ~/Development/@4site/tidycontact/apps/email/batch.ui
 
       panes:
         - vim
-        - 
+
+  - standalone.ui:
+      root: ~/Development/@4site/tidycontact/apps/standalone.ui
+
+      panes:
+        - vim
 
   - database:
-      layout: dc74,144x45,0,0{90x45,0,0,0,53x45,91,0,1}
-      root: ~/Development/@4site/tidycontact-email/packages/database
+      root: ~/Development/@4site/tidycontact/packages/database
 
       panes:
         - vim
-        - npm run tests:watch
 
   - root:
       panes:

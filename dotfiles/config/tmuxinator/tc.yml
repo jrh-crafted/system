@@ -35,3 +35,30 @@ windows:
   - root:
       panes:
         - 
+
+  - servers:e2e:
+      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
+
+      panes:
+        - npm run serve:e2e -w apps/email/batch.ui
+        - npm run serve:e2e -w apps/standalone.ui
+        - npm run serve:e2e -w apps/email/api
+        - npm run worker:batchValidateEmails:e2e -w apps/email/api
+        - npm run worker:revalidateEmails:e2e -w apps/email/api
+
+  - servers:dev:
+      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
+
+      panes:
+        - npm run serve:dev -w apps/email/batch.ui
+        - npm run serve:dev -w apps/standalone.ui
+        - npm run serve:dev -w apps/email/api
+        - npm run worker:batchValidateEmails:dev -w apps/email/api
+        - npm run worker:revalidateEmails:dev -w apps/email/api
+
+  - servers:testing:
+      layout: even-horizontal
+
+      panes:
+        - npm run worker:batchValidateEmails:testing -w apps/email/api
+        - npm run worker:revalidateEmails:testing -w apps/email/api

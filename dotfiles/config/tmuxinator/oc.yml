@@ -1,0 +1,15 @@
+name: tc
+root: ~/Development/@4site/oc/app/public/wp-content/themes/oco-wp
+
+windows:
+  - theme:
+      root: ~/Development/@4site/oc/app/public/wp-content/themes/oco-wp
+
+      panes:
+        - vim
+
+  - root:
+      root: ~/Development/@4site/oc/app/public
+
+      panes:
+        - vim

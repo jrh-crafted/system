@@ -1,0 +1,15 @@
+name: tc
+root: ~/Development/@4site/sharethumb
+
+windows:
+  - ui:
+      panes:
+        - vim
+
+  - ui.server:
+      panes:
+        - npm run serve
+
+  - root:
+      panes:
+        - 

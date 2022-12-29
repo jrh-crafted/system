@@ -1,0 +1,32 @@
+name: pe
+
+windows:
+  - website.theme:
+      root: ~/Development/@pe/website/app/public/wp-content/themes/praisingearth
+
+      panes:
+        - vim
+
+  - website.blocks:
+      root: ~/Development/@pe/website/app/public/wp-content/plugins
+
+      panes:
+        - vim
+
+  - website.root:
+      root: ~/Development/@pe/website/app/public
+
+      panes:
+        -
+
+  - api:
+      root: ~/Development/@pe/api
+
+      panes:
+        - vim
+
+  - api.server:
+      root: ~/Development/@pe/api
+
+      panes:
+        - npm run serve

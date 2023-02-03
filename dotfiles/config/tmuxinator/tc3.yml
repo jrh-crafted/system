@@ -1,0 +1,74 @@
+name: tc3
+root: ~/Development/@4site/tidycontact-v3
+
+windows:
+  - e2e:
+      root: ~/Development/@4site/tidycontact-v3/e2e
+
+      panes:
+        - vim
+
+  - servers:e2e:
+      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
+
+      panes:
+        - cd apps/email/batch.ui; pnpm serve:e2e
+        - cd apps/standalone.ui; pnpm serve:e2e
+        - cd apps/email/api; pnpm serve:e2e
+
+  - email.api:workers:e2e:
+      layout: even-horizontal
+
+      panes:
+        - cd apps/email/api; pnpm queue:revalidateEmails:work:e2e
+        - cd apps/email/api; pnpm queue:batchValidateEmails:work:e2e
+
+  - email.api:
+      root: ~/Development/@4site/tidycontact-v3/apps/email/api
+
+      panes:
+        - vim
+
+  - email.api:workers:testing:
+      layout: even-horizontal
+
+      panes:
+        - cd apps/email/api; pnpm queue:revalidateEmails:work:testing
+        - cd apps/email/api; pnpm queue:batchValidateEmails:work:testing
+
+  - email.api:workers:dev:
+      layout: even-horizontal
+
+      panes:
+        - cd apps/email/api; pnpm queue:revalidateEmails:work:dev
+        - cd apps/email/api; pnpm queue:batchValidateEmails:work:dev
+
+  - email:servers:dev:
+      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
+
+      panes:
+        - cd apps/email/batch.ui; pnpm serve:dev
+        - cd apps/standalone.ui; pnpm serve:dev
+        - cd apps/email/api; pnpm serve:dev
+
+  - email.batch.ui:
+      root: ~/Development/@4site/tidycontact-v3/apps/email/batch.ui
+
+      panes:
+        - vim
+
+  - standalone.ui:
+      root: ~/Development/@4site/tidycontact-v3/apps/standalone.ui
+
+      panes:
+        - vim
+
+  - database:
+      root: ~/Development/@4site/tidycontact-v3/packages/database
+
+      panes:
+        - vim
+
+  - root:
+      panes:
+        - 

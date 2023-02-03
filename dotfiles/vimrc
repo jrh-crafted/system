@@ -53,7 +53,7 @@ call plug#end()
 " File Browser
 
 " Hide files and directories.
-let NERDTreeIgnore = [ '^.git$', '^node_modules', '^package-lock.json', '^.svelte-kit', '^.vercel' ]
+let NERDTreeIgnore = [ '^.DS_Store$', '^.git$', '^node_modules', '^package-lock.json', '^.svelte-kit', '^.vercel' ]
 
 " Close when a file is opened.
 let NERDTreeQuitOnOpen=1

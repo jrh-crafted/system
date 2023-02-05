@@ -80,5 +80,11 @@ export EDITOR='vim'
 # Use ripgrep for searching.
 export FZF_DEFAULT_COMMAND='rg --hidden --files'
 
+# Use pyenv.
+path+="$HOME/.pyenv/bin"
+
+# Use valet.
+path+="$HOME/.composer/vendor/bin"
+
 # Use starship.
 eval "$(starship init zsh)"

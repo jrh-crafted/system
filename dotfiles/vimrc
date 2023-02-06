@@ -156,4 +156,6 @@ let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=none
 
 " The colors, Duke! The colors!
+set termguicolors
+set background=dark
 colorscheme nord

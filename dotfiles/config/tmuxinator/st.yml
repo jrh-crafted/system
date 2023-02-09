@@ -1,15 +1,23 @@
 name: tc
-root: ~/Development/@4site/sharethumb
+root: ~/Development/@4site/st
 
 windows:
+  - api:
+      root: ~/Development/@4site/st/api
+      panes:
+        - vim
+
+  - api.server:
+      root: ~/Development/@4site/st/api
+      panes:
+        - npm run api:start
+
   - ui:
+      root: ~/Development/@4site/st/ui
       panes:
         - vim
 
   - ui.server:
+      root: ~/Development/@4site/st/ui
       panes:
-        - npm run serve
-
-  - root:
-      panes:
-        - 
+        - npm run dev

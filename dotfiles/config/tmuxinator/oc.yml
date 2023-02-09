@@ -1,21 +1,21 @@
 name: oc
-root: ~/Development/@4site/oc/app/public/wp-content/themes/oco-wp
+root: ~/Development/@4site/oc/wp-content/themes/oco-wp
 
 windows:
   - theme:
-      root: ~/Development/@4site/oc/app/public/wp-content/themes/oco-wp/sass
+      root: ~/Development/@4site/oc/wp-content/themes/oco-wp/sass
 
       panes:
         - vim
 
   - theme.build:
-      root: ~/Development/@4site/oc/app/public/wp-content/themes/oco-wp
+      root: ~/Development/@4site/oc/wp-content/themes/oco-wp
 
       panes:
-        - nvm use 10 && gulp
+        - nvm use 10 && npx gulp
 
   - root:
-      root: ~/Development/@4site/oc/app/public
+      root: ~/Development/@4site/oc
 
       panes:
         - 

@@ -1,33 +1,70 @@
-name: tc
-root: ~/Development/@4site/tidycontact
+name: tc3
+root: ~/Development/@4site/tc
 
 windows:
   - e2e:
-      root: ~/Development/@4site/tidycontact/e2e
+      root: ~/Development/@4site/tc/e2e
 
       panes:
         - vim
+
+  - servers:e2e:
+      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
+
+      panes:
+        - cd apps/email/batch.ui; pnpm serve:e2e
+        - cd apps/standalone.ui; pnpm serve:e2e
+        - cd apps/email/api; pnpm serve:e2e
+
+  - email.api:workers:e2e:
+      layout: even-horizontal
+
+      panes:
+        - cd apps/email/api; pnpm queue:revalidateEmails:work:e2e
+        - cd apps/email/api; pnpm queue:batchValidateEmails:work:e2e
 
   - email.api:
-      root: ~/Development/@4site/tidycontact/apps/email/api
+      root: ~/Development/@4site/tc/apps/email/api
 
       panes:
         - vim
 
+  - email.api:workers:testing:
+      layout: even-horizontal
+
+      panes:
+        - cd apps/email/api; pnpm queue:revalidateEmails:work:testing
+        - cd apps/email/api; pnpm queue:batchValidateEmails:work:testing
+
+  - email.api:workers:dev:
+      layout: even-horizontal
+
+      panes:
+        - cd apps/email/api; pnpm queue:revalidateEmails:work:dev
+        - cd apps/email/api; pnpm queue:batchValidateEmails:work:dev
+
+  - email:servers:dev:
+      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
+
+      panes:
+        - cd apps/email/batch.ui; pnpm serve:dev
+        - cd apps/standalone.ui; pnpm serve:dev
+        - cd apps/email/api; pnpm serve:dev
+
   - email.batch.ui:
-      root: ~/Development/@4site/tidycontact/apps/email/batch.ui
+      root: ~/Development/@4site/tc/apps/email/batch.ui
 
       panes:
         - vim
 
   - standalone.ui:
-      root: ~/Development/@4site/tidycontact/apps/standalone.ui
+      root: ~/Development/@4site/tc/apps/standalone.ui
 
       panes:
         - vim
 
   - database:
-      root: ~/Development/@4site/tidycontact/packages/database
+      root: ~/Development/@4site/tc/packages/database
 
       panes:
         - vim
@@ -35,30 +72,3 @@ windows:
   - root:
       panes:
         - 
-
-  - servers:e2e:
-      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
-
-      panes:
-        - npm run serve:e2e -w apps/email/batch.ui
-        - npm run serve:e2e -w apps/standalone.ui
-        - npm run serve:e2e -w apps/email/api
-        - npm run worker:batchValidateEmails:e2e -w apps/email/api
-        - npm run worker:revalidateEmails:e2e -w apps/email/api
-
-  - servers:dev:
-      layout: a8f0,144x45,0,0{71x45,0,0[71x11,0,0,160,71x9,0,12,170,71x23,0,22,163],72x45,72,0[72x21,72,0,164,72x23,72,22,165]}
-
-      panes:
-        - npm run serve:dev -w apps/email/batch.ui
-        - npm run serve:dev -w apps/standalone.ui
-        - npm run serve:dev -w apps/email/api
-        - npm run worker:batchValidateEmails:dev -w apps/email/api
-        - npm run worker:revalidateEmails:dev -w apps/email/api
-
-  - servers:testing:
-      layout: even-horizontal
-
-      panes:
-        - npm run worker:batchValidateEmails:testing -w apps/email/api
-        - npm run worker:revalidateEmails:testing -w apps/email/api

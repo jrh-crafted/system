@@ -95,6 +95,9 @@ nnoremap fg :tabnext<cr>
 let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
 
+" Open runner.
+nnoremap <leader>ro :call VimuxOpenRunner()<cr>
+
 " Watch current test file.
 nnoremap <leader>re :call VimuxRunCommand("clear; npm run tests:watch " . expand('%'))<cr>
 

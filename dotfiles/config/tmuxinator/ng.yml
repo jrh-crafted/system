@@ -1,9 +1,9 @@
-name: engrid
-root: ~/Development/@4site/engrid
+name: ng
+root: ~/Development/@4site/ng
 
 windows:
   - engrid-scripts:
-      root: ~/Development/@4site/engrid/engrid-scripts
+      root: ~/Development/@4site/ng/engrid-scripts
       layout: 0901,190x51,0,0{124x51,0,0,27,65x51,125,0[65x26,125,0,28,65x24,125,27,29]}
 
       panes:

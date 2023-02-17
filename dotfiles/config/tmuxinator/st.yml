@@ -10,7 +10,7 @@ windows:
   - api.server:
       root: ~/Development/@4site/st/api
       panes:
-        - npm run api:start
+        - npm run api:start:dev
 
   - ui:
       root: ~/Development/@4site/st/ui

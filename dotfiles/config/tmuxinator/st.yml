@@ -1,4 +1,4 @@
-name: tc
+name: st
 root: ~/Development/@4site/st
 
 windows:
@@ -21,3 +21,11 @@ windows:
       root: ~/Development/@4site/st/ui
       panes:
         - npm run dev
+
+  - roots:
+      root: ~/Development/@4site/st
+      layout: even-horizontal
+
+      panes:
+        - cd api; clear
+        - cd ui; clear

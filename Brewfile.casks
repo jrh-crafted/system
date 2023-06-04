@@ -1,5 +1,3 @@
 tap 'moritzsternemann/apple-fonts'
 
-cask 'alacritty'
 cask 'font-sf-mono'
-cask 'rectangle'

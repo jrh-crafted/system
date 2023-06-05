@@ -1,19 +1,13 @@
-# @adaptably/system
+# @jrh/system
 
-JRH's system configuration (OS X, M1).
+JRH's system configuration (OS X, ARM).
 
 ## Installation
 
 ```
-$ git clone git@github.com:jrh-works/system.git
 $ cd system
 $ ./install
 ```
-
-## Post-Installation
-
-1. Set up Alfred.
-2. Set up Rectangle.
 
 ## Gratitude
 

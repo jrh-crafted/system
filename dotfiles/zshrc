@@ -10,7 +10,7 @@ alias re='source ~/.zshrc'
 development_path='~/Development'
 
 alias 4s="cd $development_path/@4site"
-alias ds="cd $development_path/@adaptably/system"
+alias ds="cd $development_path/@jrh/system"
 alias dv="cd $development_path"
 alias p="tmuxinator"
 

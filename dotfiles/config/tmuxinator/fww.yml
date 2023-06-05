@@ -1,0 +1,25 @@
+name: fwa
+
+windows:
+  - plugin:
+      layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
+      root: ~/Development/@4site/fww/fww-action-site/wp-content/plugins/fwa-mobilize-events
+
+      panes:
+        - vim
+        - 
+
+  - site:
+      layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
+      root: ~/Development/@4site/fww/fww-action-site/wp-content
+
+      panes:
+        - vim
+        - 
+
+  - root:
+      layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
+      root: ~/Development/@4site/fww/fww-action-site
+
+      panes:
+        - 

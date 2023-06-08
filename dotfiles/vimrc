@@ -22,10 +22,10 @@ set shiftwidth=2
 set tabstop=2
 
 " Clear highlighting.
-nnoremap <Enter> :noh<cr>
+nmap <Enter> :noh<cr>
 
 " Save easily.
-nnoremap <leader>w :write<cr>
+nmap <leader>w :write<cr>
 
 " --------------------------------------------
 " Plugins
@@ -38,6 +38,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'ervandew/supertab'
 Plug 'evanleck/vim-svelte'
+Plug 'godlygeek/tabular'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-user'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -62,32 +63,32 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 
 " Open the file browser.
-nnoremap <leader>t :NERDTreeToggle<cr>
+nmap <leader>t :NERDTreeToggle<cr>
 
 " --------------------------------------------
 " File Navigation & Search
 
-nnoremap <leader>f :Files!<cr>
-nnoremap <leader>a :Rg!<cr>
+nmap <leader>f :Files!<cr>
+nmap <leader>a :Rg!<cr>
 
 " --------------------------------------------
 " Splits
 
 " Navigate splits.
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
+nmap <C-H> <C-W><C-H>
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-L> <C-W><C-L>
 
 " --------------------------------------------
 " Tabs
 
 " Create tabs.
-nnoremap fr :tabnew<cr>
+nmap fr :tabnew<cr>
 
 " Switch tabs.
-nnoremap fd :tabprevious<cr>
-nnoremap fg :tabnext<cr>
+nmap fd :tabprevious<cr>
+nmap fg :tabnext<cr>
 
 " --------------------------------------------
 " Runner Pane
@@ -96,31 +97,31 @@ let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
 
 " Open runner.
-nnoremap <leader>ro :call VimuxOpenRunner()<cr>
+nmap <leader>ro :call VimuxOpenRunner()<cr>
 
 " Watch current test file.
-nnoremap <leader>re :call VimuxRunCommand("clear; npm run tests:watch " . expand('%'))<cr>
+nmap <leader>re :call VimuxRunCommand("clear; npm run tests:watch " . expand('%'))<cr>
 
 " Run current test file.
-nnoremap <leader>rt :call VimuxRunCommand("clear; npm t " . expand('%'))<cr>
+nmap <leader>rt :call VimuxRunCommand("clear; npm t " . expand('%'))<cr>
 
 " Run current test file in debug mode.
-nnoremap <leader>rd :call VimuxRunCommand("clear; npm run test:debug " . expand('%'))<cr>
+nmap <leader>rd :call VimuxRunCommand("clear; npm run test:debug " . expand('%'))<cr>
 
 " Re-run last command.
-nnoremap <leader>rr :VimuxRunLastCommand<cr>
+nmap <leader>rr :VimuxRunLastCommand<cr>
 
 " Run full test suite.
-nnoremap <leader>ra :call VimuxRunCommand("clear; npm t")<cr>
+nmap <leader>ra :call VimuxRunCommand("clear; npm t")<cr>
 
 " Prompt for a command.
-nnoremap <leader>p :VimuxPromptCommand<cr>
+nmap <leader>p :VimuxPromptCommand<cr>
 
 " Cancel the command.
-nnoremap <leader>x :VimuxInterruptRunner<cr>
+nmap <leader>x :VimuxInterruptRunner<cr>
 
 " Close the runner.
-nnoremap <leader>c :VimuxCloseRunner<cr>
+nmap <leader>c :VimuxCloseRunner<cr>
 
 " --------------------------------------------
 " Indentation
@@ -137,7 +138,11 @@ let g:svelte_indent_style = 0
 nmap s <plug>(SubversiveSubstitute)
 
 " Insert a divider.
-nnoremap <leader>- i--------------------------------------------<esc>:TComment<cr>ko<esc>jjO<esc>
+nmap <leader>- i--------------------------------------------<esc>:TComment<cr>ko<esc>jjO<esc>
+
+" PHP developers like to line up equals signs.
+nmap <leader>= :Tabularize /=><cr>
+vmap <leader>= :Tabularize /=><cr>
 
 " --------------------------------------------
 " Colors

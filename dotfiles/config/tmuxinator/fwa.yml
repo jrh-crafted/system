@@ -3,15 +3,15 @@ name: fwa
 windows:
   - plugin:
       layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
-      root: ~/Development/@4site/fww/fww-action-site/wp-content/plugins/fwa-mobilize-events
+      root: ~/Development/@4site/fw/fwa-site/wp-content/plugins/fwa-mobilize-events
 
       panes:
         - vim
         - 
 
-  - site:
+  - theme:
       layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
-      root: ~/Development/@4site/fww/fww-action-site/wp-content
+      root: ~/Development/@4site/fw/fwa-site/wp-content/themes/fww-theme-twentytwenty-child
 
       panes:
         - vim
@@ -19,7 +19,8 @@ windows:
 
   - root:
       layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
-      root: ~/Development/@4site/fww/fww-action-site
+      root: ~/Development/@4site/fw/fwa-site
 
       panes:
+        - vim
         - 

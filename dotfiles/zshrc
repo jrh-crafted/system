@@ -12,6 +12,7 @@ development_path='~/Development'
 alias 4s="cd $development_path/@4site"
 alias ds="cd $development_path/@jrh/system"
 alias dv="cd $development_path"
+alias jrh="cd $development_path/@jrh"
 alias p="tmuxinator"
 
 # --------------------------------------------

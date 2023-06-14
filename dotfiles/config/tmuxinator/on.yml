@@ -1,0 +1,16 @@
+name: on
+
+windows:
+  - theme:
+      layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
+      root: ~/Development/@4site/on/on-site/wp-content/themes/oneill
+
+      panes:
+        - vim
+        - 
+
+  - root:
+      root: ~/Development/@4site/on/on-site
+
+      panes:
+        - 

@@ -1,0 +1,34 @@
+name: wf
+
+windows:
+  - e2e:
+      root: ~/Development/@jrh/workflow-storyblok/e2e
+
+      panes:
+        - vim
+
+  - ui:
+      root: ~/Development/@jrh/workflow-storyblok/ui
+
+      panes:
+        - vim
+
+  - ui:servers:
+      root: ~/Development/@jrh/workflow-storyblok/ui
+      layout: even-horizontal
+
+      panes:
+        - npm run serve:ui:dev
+        - npm run serve:storybook:dev
+
+  - api:
+      root: ~/Development/@jrh/workflow-storyblok/api
+
+      panes:
+        - vim
+
+  - root:
+      root: ~/Development/@jrh/workflow-storyblok
+
+      panes:
+        - 

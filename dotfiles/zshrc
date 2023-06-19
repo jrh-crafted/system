@@ -1,11 +1,11 @@
 # --------------------------------------------
-# Aliases: General
+# General
 
 alias ll='ls -al'
 alias re='source ~/.zshrc'
 
-# --------------------------------------------
-# Aliases: Navigation
+# -------------------------------------------
+# Navigation
 
 development_path='~/Development'
 
@@ -16,7 +16,7 @@ alias jrh="cd $development_path/@jrh"
 alias p="tmuxinator"
 
 # --------------------------------------------
-# Aliases: Git
+# Git
 
 # Use `g` as a shortcut for `git`.
 # With no arguments, do `git status`.
@@ -69,7 +69,7 @@ alias gl="g log --pretty='%C(magenta)%h%C(cyan)%d %C(white)%s'"
 alias gp="g push"
 
 # --------------------------------------------
-# Commands: Search History
+# Search History
 
 bindkey '^R' history-incremental-search-backward
 

@@ -144,6 +144,9 @@ nnoremap <leader>- i--------------------------------------------<esc>:TComment<c
 nnoremap <leader>= :Tabularize /=><cr>
 vnoremap <leader>= :Tabularize /=><cr>
 
+" Autosort Tailwind classes.
+nnoremap <leader>l :silent exec '!rustywind --write "%" > /dev/null'<cr>:redraw!<cr>
+
 " --------------------------------------------
 " Colors
 

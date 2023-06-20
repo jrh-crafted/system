@@ -2,19 +2,19 @@ name: wf
 
 windows:
   - e2e:
-      root: ~/Development/@jrh/workflow-storyblok/e2e
+      root: ~/Development/@jrh/cms-workflow/e2e
 
       panes:
         - vim
 
   - ui:
-      root: ~/Development/@jrh/workflow-storyblok/ui
+      root: ~/Development/@jrh/cms-workflow/ui
 
       panes:
         - vim
 
   - ui:servers:
-      root: ~/Development/@jrh/workflow-storyblok/ui
+      root: ~/Development/@jrh/cms-workflow/ui
       layout: even-horizontal
 
       panes:
@@ -22,13 +22,13 @@ windows:
         - npm run serve:storybook:dev
 
   - api:
-      root: ~/Development/@jrh/workflow-storyblok/api
+      root: ~/Development/@jrh/cms-workflow/api
 
       panes:
         - vim
 
   - root:
-      root: ~/Development/@jrh/workflow-storyblok
+      root: ~/Development/@jrh/cms-workflow
 
       panes:
         - 

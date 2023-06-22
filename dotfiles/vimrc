@@ -33,6 +33,7 @@ nnoremap <leader>w :write<cr>
 call plug#begin('~/.vim/plugged')
 
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'StanAngeloff/php.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-sort-motion'
@@ -146,6 +147,13 @@ vnoremap <leader>= :Tabularize /=><cr>
 
 " Autosort Tailwind classes.
 nnoremap <leader>l :silent exec '!rustywind --write "%" > /dev/null'<cr>:redraw!<cr>
+
+" Split and join lines.
+let g:splitjoin_split_mapping = ''
+let g:splitjoin_join_mapping = ''
+
+nmap <Leader>j :SplitjoinJoin<cr>
+nmap <Leader>k :SplitjoinSplit<cr>
 
 " --------------------------------------------
 " Colors

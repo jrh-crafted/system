@@ -149,11 +149,14 @@ vnoremap <leader>= :Tabularize /=><cr>
 nnoremap <leader>l :silent exec '!rustywind --write "%" > /dev/null'<cr>:redraw!<cr>
 
 " Split and join lines.
+" - Remove the default mappings.
 let g:splitjoin_split_mapping = ''
 let g:splitjoin_join_mapping = ''
 
 nmap <Leader>j :SplitjoinJoin<cr>
 nmap <Leader>k :SplitjoinSplit<cr>
+
+let g:splitjoin_html_attributes_bracket_on_new_line = 1
 
 " --------------------------------------------
 " Colors

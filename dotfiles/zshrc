@@ -89,9 +89,6 @@ export FZF_DEFAULT_COMMAND='rg --hidden --files'
 # Use docker.
 path+="$HOME/.docker/bin"
 
-# Use pyenv.
-path+="$HOME/.pyenv/bin"
-
 # Use valet.
 path+="$HOME/.composer/vendor/bin"
 

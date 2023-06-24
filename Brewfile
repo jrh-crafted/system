@@ -1,3 +1,4 @@
+brew 'composer'
 brew 'fzf'
 brew 'git'
 brew 'nvm'
@@ -8,6 +9,3 @@ brew 'tmux'
 brew 'tmuxinator'
 brew 'vim'
 brew 'zsh'
-
-brew 'php'
-brew 'composer'

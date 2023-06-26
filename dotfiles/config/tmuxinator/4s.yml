@@ -1,0 +1,26 @@
+name: 4s
+
+windows:
+  - styles:
+      root: ~/Development/@4site/4s/4s-site/wp-content/themes/foursite/assets
+
+      panes:
+        - vim
+
+  - theme:
+      root: ~/Development/@4site/4s/4s-site/wp-content/themes/foursite
+
+      panes:
+        - vim
+
+  - build:
+      root: ~/Development/@4site/4s/4s-site/wp-content/themes/foursite/assets
+
+      panes:
+        - nvm use 12 && npm start
+
+  - root:
+      root: ~/Development/@4site/4s/4s-site
+
+      panes:
+        - 

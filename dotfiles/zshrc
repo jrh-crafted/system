@@ -98,5 +98,8 @@ path+="$HOME/.docker/bin"
 # Use valet.
 path+="$HOME/.composer/vendor/bin"
 
+# Use pyenv.
+path+="$HOME/.pyenv/bin"
+
 # Use starship.
 eval "$(starship init zsh)"

@@ -1,6 +1,12 @@
 name: oc
 
 windows:
+  - build:
+      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
+
+      panes:
+        - npm run watch:ds
+
   - styles:
       root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp/sass/4site
 
@@ -12,12 +18,6 @@ windows:
 
       panes:
         - vim
-
-  - build:
-      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
-
-      panes:
-        - npm run watch
 
   - root:
       root: ~/Development/@4site/oc/oc-site

@@ -1,26 +1,36 @@
 name: fwa
 
 windows:
-  - plugin:
+  - styles:
       layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
+      root: ~/Development/@4site/fw/fwa-site/wp-content/plugins/fwa-mobilize-events/modules/page/assets/styles/src
+
+      panes:
+        - vim
+        - npm run dev
+
+  - plugin:
       root: ~/Development/@4site/fw/fwa-site/wp-content/plugins/fwa-mobilize-events
 
       panes:
         - vim
-        - 
 
   - theme:
-      layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
       root: ~/Development/@4site/fw/fwa-site/wp-content/themes/fww-theme-twentytwenty-child
 
       panes:
         - vim
-        - 
 
   - root:
-      layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
       root: ~/Development/@4site/fw/fwa-site
 
       panes:
-        - vim
         - 
+
+  - debug:
+      layout: even-horizontal
+      root: ~/Development/@4site/fw/fwa-site
+
+      panes:
+        - tail -f wp-content/uploads/fwa-mobilize-events/fwa-mobilize-events.log
+        - tail -f wp-content/debug.log

@@ -10,9 +10,9 @@ alias re='source ~/.zshrc'
 development_path='~/Development'
 
 alias 4s="cd $development_path/@4site"
-alias ds="cd $development_path/@jrh/system"
+alias ad="cd $development_path/@adaptably"
+alias ds="cd $development_path/@adaptably/system"
 alias dv="cd $development_path"
-alias jrh="cd $development_path/@jrh"
 alias p="tmuxinator"
 
 # --------------------------------------------
@@ -67,6 +67,7 @@ alias gd='g diff -- . ":!*package-lock.json"'
 alias gdc='g diff --cached -- . ":!*package-lock.json"'
 alias gl="g log --pretty='%C(magenta)%h%C(cyan)%d %C(white)%s'"
 alias gp="g push"
+alias gpl="g pull"
 
 # Configure repositories for specific GitHub accounts.
 # https://www.fabian-keller.de/blog/configuring-a-different-ssh-key-per-git-repository/
@@ -100,6 +101,7 @@ path+="$HOME/.composer/vendor/bin"
 
 # Use pyenv.
 path+="$HOME/.pyenv/bin"
+eval "$(pyenv init -)"
 
 # Use starship.
 eval "$(starship init zsh)"

@@ -1,4 +1,4 @@
-name: wf
+name: wfs
 
 windows:
   - e2e:

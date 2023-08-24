@@ -1,9 +1,9 @@
 name: 4s
 
 windows:
-  - styles:
+  - blocks:styles:
       layout: ea7f,192x54,0,0{134x54,0,0,0,57x54,135,0,1}
-      root: ~/Development/@4site/4s/4s-site/wp-content/themes/foursite/blocks/styles
+      root: ~/Development/@4site/4s/4s-site/wp-content/themes/foursite/page-blocks/styles
 
       panes:
         - vim

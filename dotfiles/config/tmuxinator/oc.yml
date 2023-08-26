@@ -5,7 +5,7 @@ windows:
       root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
 
       panes:
-        - npm run watch:ds
+        - npm run watch
 
   - styles:
       root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp/sass/4site

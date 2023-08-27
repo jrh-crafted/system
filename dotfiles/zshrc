@@ -108,3 +108,11 @@ eval "$(pyenv init -)"
 
 # Use starship.
 eval "$(starship init zsh)"
+
+# --------------------------------------------
+# Initialization
+
+# Always use tmux.
+if ! [ "$TERM_PROGRAM" = "tmux" ]; then
+  tmux
+fi

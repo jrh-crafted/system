@@ -75,8 +75,8 @@ alias gpl="g pull"
 
 # Configure repositories for specific GitHub accounts.
 # https://www.fabian-keller.de/blog/configuring-a-different-ssh-key-per-git-repository/
-alias @4jrh='git config user.email "joshua@4sitestudios.com" && git config core.sshCommand "ssh -F ~/.ssh/config-github-4jrh"'
-alias @adaptably='git config user.email "github@jrh.place" && git config core.sshCommand "ssh -F ~/.ssh/config-github-adaptably"'
+alias @4jrh='git config user.email "joshua@4sitestudios.com" && git config core.sshCommand "ssh -F ~/.ssh/config.github.4jrh"'
+alias @adaptably='git config user.email "github@jrh.place" && git config core.sshCommand "ssh -F ~/.ssh/config.github.adaptably"'
 
 # --------------------------------------------
 # Search History

@@ -33,9 +33,11 @@ function g {
 gc(){
   if [[ $# == 0 ]]; then
     local branch=$(select-git-branch)
+
     if [[ -n "$branch" ]]; then
       git checkout "$branch"
     fi
+
     true
   else
     git checkout "$@"
@@ -45,11 +47,13 @@ gc(){
 # Check out a Git branch.
 function gb(){
   if [[ -z "$1" ]]; then
-    echo "No branch name :(" >&2
+    echo "Provide a branch name." >&2
     return 1
   fi
+
   local branch="$1"
   local base=$2
+
   if [[ -n "$base" ]]; then
     git checkout -b "$branch" "$base"
   else
@@ -71,7 +75,6 @@ alias gpl="g pull"
 
 # Configure repositories for specific GitHub accounts.
 # https://www.fabian-keller.de/blog/configuring-a-different-ssh-key-per-git-repository/
-
 alias @4jrh='git config user.email "joshua@4sitestudios.com" && git config core.sshCommand "ssh -F ~/.ssh/config-github-4jrh"'
 alias @adaptably='git config user.email "github@jrh.place" && git config core.sshCommand "ssh -F ~/.ssh/config-github-adaptably"'
 

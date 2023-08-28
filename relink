@@ -1,0 +1,4 @@
+# --------------------------------------------
+
+echo "Relinking dotfiles."
+rcup -d dotfiles -v

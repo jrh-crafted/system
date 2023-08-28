@@ -1,0 +1,26 @@
+name: ocds
+
+windows:
+  - blocks:
+      root: ~/Development/@4site/oc/oc-ds/blocks
+
+      panes:
+        - vim
+
+  - pages:
+      root: ~/Development/@4site/oc/oc-ds/pages
+
+      panes:
+        - vim
+
+  - build:
+      root: ~/Development/@4site/oc/oc-ds
+
+      panes:
+        - npm run dev
+
+  - root:
+      root: ~/Development/@4site/oc/oc-ds
+
+      panes:
+        - 

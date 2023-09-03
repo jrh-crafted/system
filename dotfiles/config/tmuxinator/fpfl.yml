@@ -1,0 +1,22 @@
+name: fpf-library
+
+windows:
+  - blocks:
+      root: ~/Development/@4site/fpf/fpf-library/blocks
+
+      panes:
+        - vim
+
+  - build:
+      root: ~/Development/@4site/fpf/fpf-library
+      layout: 4c84,148x45,0,0{96x45,0,0,8,51x45,97,0,24}
+
+      panes:
+        - 
+        - npm run dev
+
+  - root:
+      root: ~/Development/@4site/fpf/fpf-library
+
+      panes:
+        - 

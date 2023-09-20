@@ -1,25 +1,43 @@
 name: oc-library
+root: ~/Development/@4site/oc/oc-library
 
 windows:
-  - blocks:
-      root: ~/Development/@4site/oc/oc-library/blocks
-
-      panes:
-        - vim
-
-  - pages:
-      root: ~/Development/@4site/oc/oc-library/pages
-
-      panes:
-        - vim
-
   - build:
       root: ~/Development/@4site/oc/oc-library
       layout: 4c84,148x45,0,0{96x45,0,0,8,51x45,97,0,24}
 
       panes:
-        - 
         - npm run dev
+
+  - blocks:
+      root: ~/Development/@4site/oc/oc-library/modules/blocks
+
+      panes:
+        - vim
+
+  - pages:
+      root: ~/Development/@4site/oc/oc-library/modules/pages
+
+      panes:
+        - vim
+
+  - combiners:
+      root: ~/Development/@4site/oc/oc-library/modules/combiners
+
+      panes:
+        - vim
+
+  - elements:
+      root: ~/Development/@4site/oc/oc-library/modules/elements
+
+      panes:
+        - vim
+
+  - themes:
+      root: ~/Development/@4site/oc/oc-library/modules/themes
+
+      panes:
+        - vim
 
   - root:
       root: ~/Development/@4site/oc/oc-library

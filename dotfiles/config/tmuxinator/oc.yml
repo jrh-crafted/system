@@ -1,23 +1,24 @@
 name: oc
+root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
 
 windows:
-  - build:
+  - v4:
+      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp/oc-blocks
+
+      panes:
+        - vim
+
+  - legacy:
+      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
+
+      panes:
+        - vim
+
+  - legacy:build:
       root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
 
       panes:
         - npm run watch
-
-  - styles:
-      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp/sass/4site
-
-      panes:
-        - vim
-
-  - templates:
-      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
-
-      panes:
-        - vim
 
   - root:
       root: ~/Development/@4site/oc/oc-site

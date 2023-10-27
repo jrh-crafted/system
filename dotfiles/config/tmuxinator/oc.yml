@@ -8,20 +8,26 @@ windows:
       panes:
         - vim
 
-  - legacy:
+  - theme:
       root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
 
       panes:
         - vim
-
-  - legacy:build:
-      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
-
-      panes:
-        - npm run watch
 
   - root:
       root: ~/Development/@4site/oc/oc-site
 
       panes:
         - 
+
+  - debug:
+      root: ~/Development/@4site/oc/oc-site/wp-content
+
+      panes:
+        - tail -f debug.log
+
+  - theme:build:
+      root: ~/Development/@4site/oc/oc-site/wp-content/themes/oco-wp
+
+      panes:
+        - npm run watch

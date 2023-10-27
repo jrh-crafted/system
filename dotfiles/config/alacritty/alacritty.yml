@@ -6,19 +6,19 @@ cursor:
 # --------------------------------------------
 
 font:
-  size: 19
+  size: 20
 
   normal:
     family: SF Mono
-    style: Light
+    style: Regular
 
   bold:
     family: SF Mono
-    style: Medium
+    style: Bold
 
   italic:
     family: SF Mono
-    style: Light Italic
+    style: Italic
 
 # --------------------------------------------
 # Use Nord color scheme.

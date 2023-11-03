@@ -49,7 +49,7 @@ Plug 'svermeulen/vim-subversive'
 Plug 'tomtom/tcomment_vim'
 Plug 'wavded/vim-stylus'
 
-call plug#end() 
+call plug#end()
 
 " --------------------------------------------
 " File Browser

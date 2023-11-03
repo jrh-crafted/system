@@ -47,7 +47,6 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/vimux'
 Plug 'svermeulen/vim-subversive'
 Plug 'tomtom/tcomment_vim'
-Plug 'wavded/vim-stylus'
 
 call plug#end()
 
@@ -167,9 +166,6 @@ augroup CursorLine
   autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
 augroup END
-
-" Enable syntax highlighting for preprocessors using `vim-svelte`.
-let g:svelte_preprocessors = [ 'stylus' ]
 
 " Enable indentation guides.
 let g:indent_guides_enable_on_vim_startup = 1

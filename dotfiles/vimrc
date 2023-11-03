@@ -126,8 +126,8 @@ nnoremap <leader>c :VimuxCloseRunner<cr>
 " --------------------------------------------
 " Indentation
 
-" Disable automatic indentation in `vim-svelte`. It
-" it seems to add extra indents.
+" Disable automatic indentation in `vim-svelte`.
+" It seems to add extra indents.
 let g:svelte_indent_script = 0
 let g:svelte_indent_style = 0
 

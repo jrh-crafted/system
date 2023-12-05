@@ -39,6 +39,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'ervandew/supertab'
 Plug 'evanleck/vim-svelte'
+Plug 'findango/vim-mdx'
 Plug 'godlygeek/tabular'
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-user'
@@ -141,11 +142,11 @@ nnoremap s <plug>(SubversiveSubstitute)
 nnoremap <leader>- i--------------------------------------------<esc>:TComment<cr>ko<esc>jjO<esc>
 
 " PHP developers like to line up equals signs.
-nnoremap <leader>= :Tabularize /=><cr>
-vnoremap <leader>= :Tabularize /=><cr>
+nnoremap <leader>= :Tabularize /=<cr>
+vnoremap <leader>= :Tabularize /=<cr>
 
-" Autosort Tailwind classes.
-nnoremap <leader>l :silent exec '!rustywind --write "%" > /dev/null'<cr>:redraw!<cr>
+nnoremap <leader>> :Tabularize /=><cr>
+vnoremap <leader>> :Tabularize /=><cr>
 
 " Split and join lines.
 " - Remove the default mappings.

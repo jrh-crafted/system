@@ -1,6 +1,12 @@
 [core]
   excludesfile = ~/.gitignore
 
+  # Switch when cloning new repositories, based on
+  # desired account.
+  #
+  # sshCommand = ssh -F ~/.ssh/config.github.4jrh
+  # sshCommand = ssh -F ~/.ssh/config.github.adaptably
+
 [init]
   defaultBranch = master
 

@@ -1,9 +1,9 @@
 name: tce
-root: ~/Development/@4site/tce
+root: ~/Development/@4site/labs/tce
 
 windows:
   - e2e:
-      root: ~/Development/@4site/tce/e2e
+      root: ~/Development/@4site/labs/tce/e2e
 
       panes:
         - vim
@@ -24,7 +24,7 @@ windows:
         - cd apps/email/api; pnpm queue:batchValidateEmails:work:e2e
 
   - email.api:
-      root: ~/Development/@4site/tce/apps/email/api
+      root: ~/Development/@4site/labs/tce/apps/email/api
 
       panes:
         - vim
@@ -52,19 +52,19 @@ windows:
         - cd apps/email/api; pnpm serve:dev
 
   - email.batch.ui:
-      root: ~/Development/@4site/tce/apps/email/batch.ui
+      root: ~/Development/@4site/labs/tce/apps/email/batch.ui
 
       panes:
         - vim
 
   - standalone.ui:
-      root: ~/Development/@4site/tce/apps/standalone.ui
+      root: ~/Development/@4site/labs/tce/apps/standalone.ui
 
       panes:
         - vim
 
   - database:
-      root: ~/Development/@4site/tce/packages/database
+      root: ~/Development/@4site/labs/tce/packages/database
 
       panes:
         - vim

@@ -1,0 +1,20 @@
+name: wwf-action-center
+
+windows:
+  - app:
+      root: ~/Development/@4site/wwf/wwf-action-center
+
+      panes:
+        - vim
+
+  - server:
+      root: ~/Development/@4site/wwf/wwf-action-center
+
+      panes:
+        - npm run dev
+
+  - root:
+      root: ~/Development/@4site/wwf/wwf-action-center
+
+      panes:
+        - 

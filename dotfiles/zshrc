@@ -61,6 +61,13 @@ function gb(){
   fi
 }
 
+# Shortcut to set the current branch to track
+# its corresponding branch on `origin`.
+function gt(){
+  local currentBranch=$(git rev-parse --abbrev-ref HEAD)
+  git branch --set-upstream-to="origin/$currentBranch" "$currentBranch"
+}
+
 # Amend with the previous commit message.
 alias gam='g commit --amend -Chead'
 

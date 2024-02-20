@@ -1,0 +1,20 @@
+name: 4s
+
+windows:
+  - theme:
+      root: ~/Development/@4site/4s/site/wp-content/themes/foursite
+
+      panes:
+        - vim
+
+  - styles:
+      root: ~/Development/@4site/4s/site/wp-content/themes/foursite/page-blocks/styles
+
+      panes:
+        - npm run dev
+
+  - root:
+      root: ~/Development/@4site/4s/site
+
+      panes:
+        - 

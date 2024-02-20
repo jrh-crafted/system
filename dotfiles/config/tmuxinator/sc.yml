@@ -1,0 +1,39 @@
+name: sc
+
+windows:
+  - library:
+      root: ~/Development/@4site/scan/site-v2/library
+      panes:
+        - vim
+
+  - wp:theme:
+      root: ~/Development/@4site/scan/site-v2/wp/wp-content/themes/scan-v2
+
+      panes:
+        - vim
+
+  - wp:debug:
+      root: ~/Development/@4site/scan/site-v2/wp
+
+      panes:
+        - tail -f wp-content/debug.log
+
+  - wp:root:
+      root: ~/Development/@4site/scan/site-v2/wp
+
+      panes:
+        - 
+
+  - library:build:
+      root: ~/Development/@4site/scan/site-v2/library
+      layout: 9b5f,118x34,0,0{74x34,0,0,18,43x34,75,0[43x25,75,0,19,43x8,75,26,20]}
+
+      panes:
+        - npm run storybook:dev
+        - npm run styles:dev
+        - npm run theme:dev
+
+  - root:
+      root: ~/Development/@4site/scan/site-v2
+      panes:
+        - vim

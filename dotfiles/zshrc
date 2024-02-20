@@ -86,6 +86,11 @@ alias @4jrh='git config user.email "joshua@4sitestudios.com" && git config core.
 alias @adaptably='git config user.email "github@jrh.place" && git config core.sshCommand "ssh -F ~/.ssh/config.github.adaptably"'
 
 # --------------------------------------------
+# General Shortcuts
+
+alias ta="takeout start --all"
+
+# --------------------------------------------
 # Search History
 
 bindkey '^R' history-incremental-search-backward

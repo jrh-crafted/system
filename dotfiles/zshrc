@@ -118,6 +118,9 @@ path+="$HOME/.composer/vendor/bin"
 path+="$HOME/.pyenv/bin"
 eval "$(pyenv init -)"
 
+# Use cargo.
+path+="$HOME/.cargo/bin"
+
 # Use starship.
 eval "$(starship init zsh)"
 

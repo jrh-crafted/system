@@ -13,6 +13,7 @@ alias 4s="cd $development_path/@4site"
 alias ad="cd $development_path/@adaptably"
 alias ds="cd $development_path/@adaptably/system"
 alias dv="cd $development_path"
+alias mx="tmux"
 alias p="tmuxinator"
 
 # --------------------------------------------
@@ -123,11 +124,3 @@ path+="$HOME/.cargo/bin"
 
 # Use starship.
 eval "$(starship init zsh)"
-
-# --------------------------------------------
-# Initialization
-
-# Always use tmux.
-if ! [ "$TERM_PROGRAM" = "tmux" ]; then
-  tmux
-fi

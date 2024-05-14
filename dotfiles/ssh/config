@@ -1,0 +1,39 @@
+Include ~/.orbstack/ssh/config
+
+# --------------------------------------------
+# Ensure that Transmit doesn't try to use keys from 1Password.
+# https://help.panic.com/general/ssh-config/#identitiesonly
+
+Host actionfww.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host actionfwwdev.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host fwa2020prod.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host fwwdv.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host icriforum.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host icriforumdev.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host stupski.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host sfdora.sftp.wpengine.com
+  IdentitiesOnly yes
+
+Host sfdoradev.sftp.wpengine.com
+  IdentitiesOnly yes
+
+# --------------------------------------------
+# Use 1Password SSH agent.
+# https://developer.1password.com/docs/ssh/
+
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

@@ -64,4 +64,9 @@ sudo tic -xe alacritty,alacritty-direct "$alacritty_terminfo"
 
 # --------------------------------------------
 
+log "Setting correct SSH permissions."
+chmod 600 dotfiles/ssh/config
+
+# --------------------------------------------
+
 log "All done!"

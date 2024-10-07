@@ -6,6 +6,7 @@
   #
   # sshCommand = ssh -F ~/.ssh/config.github.4jrh
   # sshCommand = ssh -F ~/.ssh/config.github.adaptably
+  # sshCommand = ssh -F ~/.ssh/config.github.rlc-jrh
 
 [init]
   defaultBranch = master

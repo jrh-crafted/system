@@ -17,6 +17,35 @@ alias mx="tmux"
 alias p="tmuxinator"
 
 # --------------------------------------------
+# General Shortcuts
+
+alias ta="takeout start --all"
+
+# --------------------------------------------
+# Search History
+
+bindkey '^R' history-incremental-search-backward
+
+# --------------------------------------------
+# Utilities
+
+# Use nvm.
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+
+# Use vim.
+export EDITOR='vim'
+
+# Use ripgrep for searching.
+export FZF_DEFAULT_COMMAND='rg --hidden --files'
+
+# Use composer.
+path+="$HOME/.composer/vendor/bin"
+
+# Use starship.
+eval "$(starship init zsh)"
+
+# --------------------------------------------
 # Git
 
 # Use `g` as a shortcut for `git`.
@@ -85,32 +114,4 @@ alias gpl="g pull"
 # https://www.fabian-keller.de/blog/configuring-a-different-ssh-key-per-git-repository/
 alias @4jrh='git config user.email "joshua@4sitestudios.com" && git config core.sshCommand "ssh -F ~/.ssh/config.github.4jrh"'
 alias @adaptably='git config user.email "github@jrh.place" && git config core.sshCommand "ssh -F ~/.ssh/config.github.adaptably"'
-
-# --------------------------------------------
-# General Shortcuts
-
-alias ta="takeout start --all"
-
-# --------------------------------------------
-# Search History
-
-bindkey '^R' history-incremental-search-backward
-
-# --------------------------------------------
-# Utilities
-
-# Use nvm.
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-
-# Use vim.
-export EDITOR='vim'
-
-# Use ripgrep for searching.
-export FZF_DEFAULT_COMMAND='rg --hidden --files'
-
-# Use composer.
-path+="$HOME/.composer/vendor/bin"
-
-# Use starship.
-eval "$(starship init zsh)"
+alias @rlc='git config user.email "joshua@reclaimingleftovercuisine.org" && git config core.sshCommand "ssh -F ~/.ssh/config.github.rlc"'

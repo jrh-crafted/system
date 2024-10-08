@@ -46,9 +46,9 @@ Plug 'kana/vim-textobj-user'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'preservim/nerdtree'
 Plug 'preservim/vimux'
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'svermeulen/vim-subversive'
 Plug 'tomtom/tcomment_vim'
+Plug 'vim-ruby/vim-ruby'
 
 call plug#end()
 
@@ -148,9 +148,6 @@ vnoremap <leader>= :Tabularize /=<cr>
 
 nnoremap <leader>> :Tabularize /=><cr>
 vnoremap <leader>> :Tabularize /=><cr>
-
-" Format using Prettier.
-nnoremap <leader>r :Prettier<cr>
 
 " Split and join lines.
 " - Remove the default mappings.

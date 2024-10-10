@@ -1,4 +1,4 @@
-# --------------------------------------------
+# --------------------------------------------TH
 # General
 
 alias ll='ls -al'
@@ -45,6 +45,9 @@ path+="$HOME/.composer/vendor/bin"
 
 # Use starship.
 eval "$(starship init zsh)"
+
+# Use rbenv.
+eval "$(rbenv init - zsh)"
 
 # --------------------------------------------
 # Git
@@ -115,4 +118,32 @@ alias gpl="g pull"
 # https://www.fabian-keller.de/blog/configuring-a-different-ssh-key-per-git-repository/
 alias @4jrh='git config user.email "joshua@4sitestudios.com" && git config core.sshCommand "ssh -F ~/.ssh/config.github.4jrh"'
 alias @adaptably='git config user.email "github@jrh.place" && git config core.sshCommand "ssh -F ~/.ssh/config.github.adaptably"'
-alias @rlc='git config user.email "joshua@reclaimingleftovercuisine.org" && git config core.sshCommand "ssh -F ~/.ssh/config.github.rlc"'
+alias @rlc='git config user.email "joshua@rescuingleftovercuisine.org" && git config core.sshCommand "ssh -F ~/.ssh/config.github.rlc-jrh"'
+
+# --------------------------------------------
+# Automatically switch to Node version from
+# .nvmrc.
+
+autoload -U add-zsh-hook
+
+load-nvmrc() {
+  local nvmrc_path
+  nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version
+    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
+      nvm use
+    fi
+  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
+    echo "[nvm] Reverting to default version."
+    nvm use default
+  fi
+}
+
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc

@@ -1,0 +1,22 @@
+name: rlc
+
+windows:
+  - code:
+      root: ~/Development/@rlc/library
+
+      panes:
+        - vim
+
+  - server:
+      root: ~/Development/@rlc/library
+      layout: even-vertical
+
+      panes:
+        - npm run storybook:dev
+        - npm run styles:dev
+
+  - root:
+      root: ~/Development/@rlc/library
+
+      panes:
+        -

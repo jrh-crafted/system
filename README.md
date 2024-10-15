@@ -2,11 +2,11 @@
 
 JRH's system configuration (OS X, ARM).
 
-## Installation
+## Setup
 
 ```
 $ cd system
-$ ./install
+$ ./setup
 ```
 
 ## Gratitude

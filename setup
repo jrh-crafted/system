@@ -9,10 +9,6 @@ log(){
   echo "[system] $@"
 }
 
-stay_awake_while(){
-  caffeinate -dims "$@"
-}
-
 # --------------------------------------------
 # Installation
 
@@ -20,7 +16,7 @@ log "Checking for command-line tools."
 
 if command_does_not_exist xcodebuild; then
   log "Installing command-line tools."
-  stay_awake_while xcode-select --install
+  xcode-select --install
 fi
 
 # --------------------------------------------
@@ -29,7 +25,7 @@ log "Checking for Homebrew."
 
 if command_does_not_exist brew; then
   log "Installing Homebrew."
-  stay_awake_while /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
   log "Adding Homebrew to shell."
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -39,15 +35,15 @@ fi
 # --------------------------------------------
 
 log "Installing system dependencies via Homebrew."
-stay_awake_while arch -arm64 brew bundle --no-lock
+arch -arm64 brew bundle --no-lock
 
 log "Installing development applications via Homebrew."
-stay_awake_while arch -arm64 brew bundle --no-lock --file Brewfile.casks
+arch -arm64 brew bundle --no-lock --file Brewfile.casks
 
 # --------------------------------------------
 
 log "Linking dotfiles."
-stay_awake_while rcup -d dotfiles -v
+rcup -d dotfiles -v
 
 # --------------------------------------------
 
@@ -59,7 +55,7 @@ vim +PlugInstall +qa
 log "Installing Alacritty terminfo (requires sudo)."
 
 alacritty_terminfo=$(mktemp)
-stay_awake_while curl -o "$alacritty_terminfo" https://raw.githubusercontent.com/jwilm/alacritty/master/extra/alacritty.info
+curl -o "$alacritty_terminfo" https://raw.githubusercontent.com/jwilm/alacritty/master/extra/alacritty.info
 sudo tic -xe alacritty,alacritty-direct "$alacritty_terminfo"
 
 # --------------------------------------------

@@ -1,7 +1,8 @@
 # --------------------------------------------
 # Tell search tools what to ignore.
 
+package-lock.json
+
 .git/
 autoload/
 node_modules/
-package-lock.json

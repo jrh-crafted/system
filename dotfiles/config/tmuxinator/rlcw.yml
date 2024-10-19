@@ -1,10 +1,13 @@
-name: rlc
+name: rlc-website
 
 windows:
   - server:
       root: ~/Development/@rlc/website
+      layout: 3eb9,118x34,0,0[118x29,0,0,1,118x4,0,30,7]
+
       panes:
         - bundle exec rails s
+        - local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem
 
   - code:
       root: ~/Development/@rlc/website

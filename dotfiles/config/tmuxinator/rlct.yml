@@ -1,0 +1,14 @@
+name: rlc-tests
+
+windows:
+  - code:
+      root: ~/Development/@rlc/tests
+
+      panes:
+        - vim
+
+  - root:
+      root: ~/Development/@rlc/tests
+
+      panes:
+        - 

@@ -1,16 +1,8 @@
-# --------------------------------------------TH
-# General
-
-alias ll='ls -al'
-alias re='source ~/.zshrc'
-
 # -------------------------------------------
 # Navigation
 
 development_path='~/Development'
 
-alias 4s="cd $development_path/@4site"
-alias ad="cd $development_path/@adaptably"
 alias ds="cd $development_path/@adaptably/system"
 alias dv="cd $development_path"
 alias mx="tmux"
@@ -18,17 +10,20 @@ alias p="tmuxinator"
 alias rlc="cd $development_path/@rlc"
 
 # --------------------------------------------
-# General Shortcuts
-
-alias ta="takeout start --all"
-
-# --------------------------------------------
 # Search History
 
 bindkey '^R' history-incremental-search-backward
 
 # --------------------------------------------
+# Shell
+
+alias ll='ls -al'
+alias re='source ~/.zshrc'
+
+# --------------------------------------------
 # Utilities
+
+alias ta="takeout start --all"
 
 # Use nvm.
 export NVM_DIR="$HOME/.nvm"
@@ -108,6 +103,7 @@ alias gam='g commit --amend -Chead'
 # Simple aliases.
 alias ga='g add'
 alias gcm='g commit -m '
+alias gcp='g cherry-pick '
 alias gd='g diff -- . ":!*package-lock.json"'
 alias gdc='g diff --cached -- . ":!*package-lock.json"'
 alias gl="g log --pretty='%C(magenta)%h%C(cyan)%d %C(white)%s'"

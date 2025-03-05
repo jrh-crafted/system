@@ -3,17 +3,20 @@ name: rlc-library
 windows:
   - code:
       root: ~/Development/@rlc/library
+      layout: 4998,118x34,0,0{78x34,0,0,1,39x34,79,0,9}
 
       panes:
         - vim
+        - npm test
 
   - server:
       root: ~/Development/@rlc/library
-      layout: even-vertical
+      layout: b3ee,118x34,0,0[118x17,0,0,25,118x16,0,18{75x16,0,18,26,42x16,76,18,27}]
 
       panes:
         - npm run storybook:dev
         - npm run styles:dev
+        - npm run styles:dev:engine
 
   - root:
       root: ~/Development/@rlc/library

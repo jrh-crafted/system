@@ -1,0 +1,20 @@
+name: rlc-v2
+
+windows:
+  - code:
+      root: ~/Development/@rlc/rlc-v2
+
+      panes:
+        - vim
+
+  - server:
+      root: ~/Development/@rlc/rlc-v2
+
+      panes:
+        - bundle exec rails s
+
+  - root:
+      root: ~/Development/@rlc/rlc-v2
+
+      panes:
+        -

@@ -10,6 +10,11 @@ alias p="tmuxinator"
 alias rlc="cd $development_path/@rlc"
 
 # --------------------------------------------
+# Rails
+
+alias be="bundle exec"
+
+# --------------------------------------------
 # Search History
 
 bindkey '^R' history-incremental-search-backward

@@ -103,17 +103,17 @@ nnoremap fg :tabnext<cr>
 let g:VimuxHeight = "40"
 let g:VimuxOrientation = "h"
 
-" Open runner.
-nnoremap <leader>ro :call VimuxOpenRunner()<cr>
-
 " Watch current test file (Node).
 nnoremap <leader>re :call VimuxRunCommand("clear; npm run tests:watch " . expand('%'))<cr>
 
 " Run current test file (Rails).
 nnoremap <leader>rt :call VimuxRunCommand("clear; bundle exec rspec " . expand('%') . " -f documentation")<cr>
 
-" Run current line of current test file (Rails).
+" Run current line of current test file in browser (Rails).
 nnoremap <leader>rl :call VimuxRunCommand("clear; RLC__TESTS__HEADLESS=false bundle exec rspec " . expand('%') . ":" . line('.'))<cr>
+
+" Run current line of current test file in headless mode (Rails).
+nnoremap <leader>ro :call VimuxRunCommand("clear; RLC__TESTS__HEADLESS=true bundle exec rspec " . expand('%') . ":" . line('.'))<cr>
 
 " Run current test file in debug mode (Node).
 nnoremap <leader>rd :call VimuxRunCommand("clear; npm run test:debug " . expand('%'))<cr>

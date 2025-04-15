@@ -3,7 +3,7 @@
 
 development_path='~/Development'
 
-alias ds="cd $development_path/@adaptably/system"
+alias ds="cd $development_path/@jrh/system"
 alias dv="cd $development_path"
 alias mx="tmux"
 alias p="tmuxinator"

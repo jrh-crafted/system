@@ -1,4 +1,3 @@
-brew 'composer'
 brew 'fzf'
 brew 'git'
 brew 'nvm'

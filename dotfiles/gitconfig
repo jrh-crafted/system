@@ -4,8 +4,7 @@
   # Switch when cloning new repositories, based on
   # desired account.
   #
-  # sshCommand = ssh -F ~/.ssh/config.github.4jrh
-  # sshCommand = ssh -F ~/.ssh/config.github.adaptably
+  # sshCommand = ssh -F ~/.ssh/config.github.jrh
   # sshCommand = ssh -F ~/.ssh/config.github.rlc-jrh
 
 [init]
@@ -17,4 +16,4 @@
 
 [user]
   name = Joshua Reade Harris
-  email = joshu@readeharr.is
+  email = joshua.reade.harris@gmail.com

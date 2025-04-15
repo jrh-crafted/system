@@ -1,13 +1,4 @@
 # --------------------------------------------
-# Ensure that Transmit doesn't try to use keys from 1Password.
-# https://help.panic.com/general/ssh-config/#identitiesonly
-
-# Example:
-#
-# Host actionfww.sftp.wpengine.com
-#   IdentitiesOnly yes
-
-# --------------------------------------------
 # Use 1Password SSH agent.
 # https://developer.1password.com/docs/ssh/
 

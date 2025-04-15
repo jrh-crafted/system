@@ -35,10 +35,10 @@ fi
 # --------------------------------------------
 
 log "Installing system dependencies via Homebrew."
-arch -arm64 brew bundle --no-lock
+arch -arm64 brew bundle
 
 log "Installing development applications via Homebrew."
-arch -arm64 brew bundle --no-lock --file Brewfile.casks
+arch -arm64 brew bundle --file Brewfile.casks
 
 # --------------------------------------------
 

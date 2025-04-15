@@ -28,26 +28,30 @@ alias re='source ~/.zshrc'
 # --------------------------------------------
 # Utilities
 
-alias ta="takeout start --all"
-
 # Use nvm.
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 
-# Use vim.
-export EDITOR='vim'
+# Use pyenv.
+eval "$(pyenv init - zsh)"
+
+# Use rbenv.
+eval "$(rbenv init - zsh)"
 
 # Use ripgrep for searching.
 export FZF_DEFAULT_COMMAND='rg --hidden --files'
 
-# Use composer.
-path+="$HOME/.composer/vendor/bin"
-
 # Use starship.
 eval "$(starship init zsh)"
 
-# Use rbenv.
-eval "$(rbenv init - zsh)"
+# Use vim as default editor.
+export EDITOR='vim'
+
+# --------------------------------------------
+# Utilities: Takeout
+
+alias ta="takeout start --all"
+alias takeout="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock --add-host=host.docker.internal:host-gateway -it tighten/takeout:latest"
 
 # --------------------------------------------
 # Git

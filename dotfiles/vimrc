@@ -110,10 +110,10 @@ nnoremap <leader>re :call VimuxRunCommand("clear; npm run tests:watch " . expand
 nnoremap <leader>rt :call VimuxRunCommand("clear; bundle exec rspec " . expand('%') . " -f documentation")<cr>
 
 " Run current line of current test file in browser (Rails).
-nnoremap <leader>rl :call VimuxRunCommand("clear; RLC__TESTS__HEADLESS=false bundle exec rspec " . expand('%') . ":" . line('.'))<cr>
+nnoremap <leader>rl :call VimuxRunCommand("clear; RLC__TESTS__HEADLESS=false bundle exec rspec " . expand('%') . ":" . line('.') . " -f documentation")<cr>
 
 " Run current line of current test file in headless mode (Rails).
-nnoremap <leader>ro :call VimuxRunCommand("clear; RLC__TESTS__HEADLESS=true bundle exec rspec " . expand('%') . ":" . line('.'))<cr>
+nnoremap <leader>ro :call VimuxRunCommand("clear; RLC__TESTS__HEADLESS=true bundle exec rspec " . expand('%') . ":" . line('.') . " -f documentation")<cr>
 
 " Run current test file in debug mode (Node).
 nnoremap <leader>rd :call VimuxRunCommand("clear; npm run test:debug " . expand('%'))<cr>

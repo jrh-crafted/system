@@ -3,11 +3,12 @@ name: rlc-website
 windows:
   - server:
       root: ~/Development/@rlc/website
-      layout: 3eb9,118x34,0,0[118x29,0,0,1,118x4,0,30,7]
+      layout: da6b,152x40,0,0[152x32,0,0,1,152x7,0,33{28x7,0,33,4,123x7,29,33,5}]
 
       panes:
         - bundle exec rails s
         - local-ssl-proxy --source 3010 --target 3000 --cert ./.ssh/localhost.pem --key ./.ssh/localhost-key.pem
+        - bundle exec sidekiq
 
   - code:
       root: ~/Development/@rlc/website

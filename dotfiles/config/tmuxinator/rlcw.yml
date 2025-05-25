@@ -8,7 +8,7 @@ windows:
       panes:
         - ta && be rails s
         - local-ssl-proxy --source 3010 --target 3000 --cert ./.ssh/localhost.pem --key ./.ssh/localhost-key.pem
-        - be sidekiq
+        - ta && be sidekiq
 
   - code:
       root: ~/Development/@rlc/website

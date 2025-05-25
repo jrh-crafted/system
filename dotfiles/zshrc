@@ -8,6 +8,7 @@ alias dv="cd $development_path"
 alias mx="tmux"
 alias p="tmuxinator"
 alias rlc="cd $development_path/@rlc"
+alias rlcw="cd $development_path/@rlc/website"
 
 # --------------------------------------------
 # Rails

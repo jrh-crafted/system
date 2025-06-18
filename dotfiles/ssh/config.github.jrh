@@ -2,7 +2,7 @@ Host github.com
   HostName github.com
   Port 22
   User git
-  IdentityFile ~/.ssh/Forge.github.jrh.pub
+  IdentityFile ~/.ssh/keys/Forge.github.jrh.pub
 
 Host *
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

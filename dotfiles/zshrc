@@ -1,3 +1,6 @@
+source "/Users/jrh/.zsh/env.zsh"
+source "/Users/jrh/.zsh/rlc.zsh"
+
 # -------------------------------------------
 # Navigation
 
@@ -124,56 +127,6 @@ alias gpl="g pull"
 # https://www.fabian-keller.de/blog/configuring-a-different-ssh-key-per-git-repository/
 alias @jrh='git config user.email "joshua.reade.harris@gmail.com" && git config user.name "Joshua Reade Harris" && git config core.sshCommand "ssh -F ~/.ssh/config.github.jrh"'
 alias @rlc='git config user.email "joshua@rescuingleftovercuisine.org" && git config user.name "Joshua Reade Harris" && git config core.sshCommand "ssh -F ~/.ssh/config.github.rlc-jrh"'
-
-# --------------------------------------------
-# Git: RLC
-
-alias gs='rlc__stage_latest_commit'
-
-rlc__stage_latest_commit() {
-  # Store the current branch name
-  local original_branch=$(git branch --show-current)
-
-  local latest_commit_id=$(git rev-parse HEAD)
-  local latest_commit_message=$(git log -1 --pretty=format:"%s" "$latest_commit_id")
-  echo "📝 Staging commit: '$latest_commit_message' from branch '$original_branch'."
-
-  echo "🔄 Switching to branch 'staging'..."
-  if ! git checkout staging; then
-    echo "🔄 Error: Failed to switch to branch 'staging'."
-    return 1
-  fi
-
-  echo "⬇️  Pulling latest changes on branch 'staging'..."
-  if ! git pull; then
-    echo "⬇️ Error: Failed to pull from branch 'staging'."
-    git checkout "$original_branch"
-    return 1
-  fi
-
-  # Cherry pick the stored commit
-  echo "🍒 Cherry-picking commit '$latest_commit_id'..."
-  if ! git cherry-pick "$latest_commit_id"; then
-    echo "🍒 Error: Failed to cherry-pick commit '$latest_commit_id'."
-    git checkout "$original_branch"
-    return 1
-  fi
-
-  echo "⬆️  Pushing branch 'staging'..."
-  if ! git push; then
-    echo "⬆️ Error: Failed to push branch 'staging'."
-    git checkout "$original_branch"
-    return 1
-  fi
-
-  echo "↩️ Switching back to '$original_branch'..."
-  if ! git checkout "$original_branch"; then
-    echo "↩️ Error: Failed to switch back to original branch '$original_branch'."
-    return 1
-  fi
-
-  echo "✅ Successfully staged $latest_commit_message."
-}
 
 # --------------------------------------------
 # Automatically switch to Node version from

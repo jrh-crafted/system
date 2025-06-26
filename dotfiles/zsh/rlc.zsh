@@ -2,7 +2,34 @@
 # RLC: Databases
 
 alias dbp='rlc__sync_database production'
+alias dbr='rlc__reload_database'
 alias dbs='rlc__sync_database staging'
+
+rlc__reload_database() {
+  local env="$1"
+
+  if [[ "$env" != "staging" && "$env" != "production" ]]; then
+    echo "Usage: rlc__reload_database [staging|production]"
+    return 1
+  fi
+
+  local backup_file
+  local local_db
+
+  if [[ "$env" == "production" ]]; then
+    backup_file="$(pwd)/db/backup/production.dump"
+    local_db="rlc"
+  else
+    backup_file="$(pwd)/db/backup/staging.dump"
+    heroku_app="rlc-staging-master"
+    heroku_db="postgresql-cubed-23345"
+    local_db="rlc_staging"
+  fi
+
+  echo "🔃 Reloading '$local_db' from '$backup_file'..."
+  PGPASSWORD=$PG__PASSWORD pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d "$local_db" "$backup_file"
+  echo "✅ '$local_db' reloaded from '$backup_file'."
+}
 
 rlc__sync_database() {
   local env="$1"
